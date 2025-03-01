@@ -1,3 +1,57 @@
 [module]
   [module.hugoVersion]
     min = "0.114.0"
+
+
+[params]
+user = "hello"
+hostname = "kaushik"
+readingTime = false
+footerHtml = 'CC-0, Built with <a href="https://gohugo.io" class="footerLink">Hugo</a> and <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme'
+math = true
+
+  [params.author]
+    name = "Kaushik Karthikeyan"
+    avatarSize = "size-m"
+    email = "kkaushikk2002@gmail.com"
+    
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/kauuu"
+target = "_blank"
+aria = "GitHub Profile"
+
+[[params.social]]
+key = 1
+name = "linkedin"
+url = "https://www.linkedin.com/in/kaushikkarthikeyan/"
+rel = "me"  # You can also add rel to social link
+
+[[params.social]]
+key = 2
+name = "email"
+url = "mailto:kkaushikk2002@gmail.com"
+
+
+[params.styles]
+color = "blue"
+
+[menu]
+  [[menu.header]]
+    name = "posts"
+    weight = 0
+    url = "/posts"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "/about"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
