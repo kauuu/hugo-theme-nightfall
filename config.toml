@@ -46,6 +46,10 @@ color = "blue"
     name = "about"
     weight = 1
     url = "/about"
+  [[menu.header]]
+  name = "cv"
+  weight = 2
+  url = "/cv"
 
 [markup]
   [markup.goldmark]
